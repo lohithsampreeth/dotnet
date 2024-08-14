@@ -1,0 +1,19 @@
+pipeline {
+    agent {
+        label 'windows-node' 
+    }
+
+    stages {
+        stage('Create Directory') {
+            steps {
+                bat 'mkdir demo'
+            }
+        }
+
+        stage('List Directory') {
+            steps {
+                bat 'dir '
+            }
+        }
+    }
+}
